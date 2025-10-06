@@ -1,30 +1,11 @@
-﻿namespace Library
+﻿using Library;
+
+class Program
 {
-    class Book
+    static void Main(string[] args)
     {
-        string Title;
-        string Author;
-        string ISBN;
+        Book book = new Book("C# for beginners", "Bill Gates", "1234567");
 
-        public Book(string bookTitle, string bookAuthor, string bookISBN)
-        {
-            Title = bookTitle;
-            Author = bookAuthor;
-            ISBN = bookISBN;
-        }
-
-        void DisplayInfo()
-        {
-            Console.WriteLine($"Book title: {Title}");
-            Console.WriteLine($"Book Author: {Author}");
-            Console.WriteLine($"Book ISBN: {ISBN}");
-            Console.WriteLine();
-        }
-        static void Main(string[] args)
-        {
-            Book book = new Book("C# for beginners", "Bill Gates", "1234567");
-
-            book.DisplayInfo();
-        }
+        book.DisplayInfo();
     }
 }
